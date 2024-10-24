@@ -1,26 +1,34 @@
-# Windows-System-Security-Check-Script-#1
+# System Security Check Script#1
 
-This Python script automates basic security checks on a Windows system. It helps users monitor their system for potential security issues by performing the following tasks:
+This Python script performs a comprehensive security check on a Windows system. It checks the status of various security mechanisms like Windows Defender, Firewall, UAC, and BitLocker, detects suspicious processes, and verifies the integrity of running processes using file hashing.
 
 ## Features:
-- **Windows Defender Status Check**: Verifies whether Windows Defender's real-time protection is enabled, ensuring your system is actively protected.
-- **System File Check (SFC)**: Runs the `sfc /scannow` command to check and repair any corrupt or missing system files, improving system integrity.
-- **Suspicious Process Detection**: Scans currently running processes for suspicious activity (e.g., malware), which can be customized based on specific process names.
+- Checks if Windows Defender real-time protection is active.
+- Runs `sfc /scannow` to detect and repair corrupted system files.
+- Detects suspicious processes by comparing process names.
+- Checks third-party antivirus status and Windows Firewall status.
+- Inspects open ports and logs active network connections.
+- Checks if BitLocker and UAC are enabled.
+- Verifies the integrity of running processes by calculating SHA-256 hash of executables.
+- Logs all operations to `system_security_check.log` for auditing.
 
 ## Usage:
-1. Clone the repository.
-2. Run the script in a Python environment with administrative privileges for accurate results.
-3. The script will automatically check the system's security status and display any issues found.
+- Ensure you are running the script as an administrator.
+- This script is designed for Windows environments.
+- Requires Python and the following packages:
+  - `psutil`
+  - `subprocess`
+  - `logging`
+  - `ctypes`
 
 ## Requirements:
 - Python 3.x
 - `psutil` library (Install with `pip install psutil`)
 
-## ⚠️ Warning:
-The code contains **example malware names** which are not real. To test the detection feature, you can replace the example name with actual malware process names if available.
-
-- **DO NOT** run this script on a real operating system if you are testing with real malware.
-- **Use a virtual environment** like VirtualBox or VMware to safely run tests with malware.
+⚠ **Warning**: 
+- This script contains example malware names and is for educational purposes. Replace "example_malware.exe" with real malware names if needed.
+- Do not run real malware on your main operating system. Use virtual machines such as VBox or VMware to avoid compromising your system.
+- The script is not fully complete yet, and some issues may arise, for instance, Windows Defender real-time protection occasionally may not be detected.
 
 ## 🛠 Known Issues:
 This script is still a **work in progress**. There are some issues that may arise, such as:
