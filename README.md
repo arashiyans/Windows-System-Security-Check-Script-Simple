@@ -16,6 +16,13 @@ This Python script automates basic security checks on a Windows system. It helps
 - Python 3.x
 - `psutil` library (Install with `pip install psutil`)
 
+## ⚠️ Warning:
+The code contains **example malware names** which are not real. To test the detection feature, you can replace the example name with actual malware process names if available.
+
+- **DO NOT** run this script on a real operating system if you are testing with real malware.
+- **Use a virtual environment** like VirtualBox or VMware to safely run tests with malware.
+
+
 
 # Kontribusi
 Kami sangat menghargai kontribusi Anda. Jika Anda ingin berkontribusi pada proyek ini, silakan ikuti langkah-langkah berikut:
