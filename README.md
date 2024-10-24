@@ -22,7 +22,11 @@ The code contains **example malware names** which are not real. To test the dete
 - **DO NOT** run this script on a real operating system if you are testing with real malware.
 - **Use a virtual environment** like VirtualBox or VMware to safely run tests with malware.
 
-
+## 🛠 Known Issues:
+This script is still a **work in progress**. There are some issues that may arise, such as:
+- The **Windows Defender Real-Time Protection** status may not always be detected accurately in some environments.
+  
+Feel free to contribute or provide feedback to improve the script!
 
 # Kontribusi
 Kami sangat menghargai kontribusi Anda. Jika Anda ingin berkontribusi pada proyek ini, silakan ikuti langkah-langkah berikut:
